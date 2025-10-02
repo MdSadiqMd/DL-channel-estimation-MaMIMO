@@ -1,7 +1,7 @@
 #!/bin/bash
 # main paths
-PY=~/anaconda3/envs/py3_tf2.3/bin/python
-MATLAB=/usr/local/MATLAB/R2022a/bin/matlab
+PY=~/miniconda3/envs/py3_tf2.3/bin/python
+MATLAB=/home/sadiq/Downloads/bin/matlab
 MAT_CODEDIR=packet_generation/phased_arr
 MODEL_DIR=magazine_review
 PYDATASET_DIR=datasets_maMIMO

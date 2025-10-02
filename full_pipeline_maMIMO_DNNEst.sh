@@ -37,7 +37,16 @@ fi
 mkdir -p $MODEL_DIR/BS${Nt}_denoise_${TRAIN_Npkt}_SNR120
 # 3) train
 echo "Start training the model.."
-$PY massiveMIMO_CSI_prediction_DNN.py --train -x $PYDATASET_DIR/SNRanalysis/dataset${TRAIN_Npkt}_1Usr_BS${Nt}_SNR120_NOISELESS.b --nn 1024 1024 -d $MODEL_DIR/BS${Nt}_denoise_${TRAIN_Npkt}_SNR120 --bs 256 --epochs 1000 --method default_SNR --useGPU 0 --useBN --datasource matlab_maMimo
+yes "y" | $PY massiveMIMO_CSI_prediction_DNN.py --train \
+    -x "$PYDATASET_DIR/SNRanalysis/dataset${TRAIN_Npkt}_1Usr_BS${Nt}_SNR120_NOISELESS.b" \
+    --nn 1024 1024 \
+    -d "$MODEL_DIR/BS${Nt}_denoise_${TRAIN_Npkt}_SNR120" \
+    --bs 256 \
+    --epochs 1000 \
+    --method default_SNR \
+    --useGPU 0 \
+    --useBN \
+    --datasource matlab_maMimo
 
 # 4) generate test output
 echo "Generate test output."

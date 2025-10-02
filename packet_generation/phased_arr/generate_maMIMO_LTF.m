@@ -116,7 +116,7 @@ prm.numPadZeros = numPadSym*(prm.FFTLength+prm.CyclicPrefixLength);
 
 %% Define transmit and receive arrays and positional parameters for the system.
 
-prm.cLight = physconst('LightSpeed');
+prm.cLight = 3e8;
 prm.lambda = prm.cLight/prm.fc;
 
 % Get transmit and receive array information
